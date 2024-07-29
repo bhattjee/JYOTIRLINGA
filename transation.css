@@ -1,0 +1,143 @@
+.content {
+  overflow: hidden; /* Ensure content within the box doesn't overflow */
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+
+.box1 {
+  opacity: 0; /* Initially hide the text */
+  animation: fadeInWords 5s ease forwards; /* Define the animation */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Keyframes for fading in each word */
+@keyframes fadeInWords {
+  from {
+    opacity: 0; /* Start with full transparency */
+  }
+  to {
+    opacity: 1; /* Fade in to full visibility */
+  }
+}
+
+/* Delay each word */
+.box1 > * {
+  animation-delay: calc(0.5s * var(--index)); /* Adjust delay timing as needed */
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+.card {
+  transition: all 0.3s ease-in-out; /* Define transition for all properties */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+  box-shadow: 3px 8px 100px rgba(238, 244, 246, 0.664); /* Add a box shadow */
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+.w3-container {
+  text-align: right; /* Align all text to the left */
+  display: flex; /* Use flexbox for vertical alignment */
+  align-items: center; /* Vertically center align items */
+}
+
+.w3-center {
+  
+  display: inline-block;
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+.animate-left {
+  position: relative;
+ 
+}
+.animate-left p{
+  
+    text-align: left;
+    font-size: 25px;
+}
+.animate-left.animate {
+  animation: animateleft 4s forwards; /* Added "forwards" to retain final state */
+}
+
+@keyframes animateleft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+.animate-right {
+  position: relative;
+}
+
+.animate-right h2,
+.animate-right p {
+  opacity: 0; /* Initially hide text */
+  transform: translateX(100%); /* Start off-screen to the right */
+}
+
+.animate-right.animate h2,
+.animate-right.animate p {
+  animation: animateright2 4s forwards; /* Animate the text */
+}
+
+@keyframes animateright {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+.animate-right2 {
+  position: relative;
+}
+
+.animate-right2 h2,
+.animate-right2 p {
+  opacity: 0; /* Initially hide text */
+  transform: translateX(100%); /* Start off-screen to the right */
+}
+
+.animate-right2.animate h2,
+.animate-right2.animate p {
+  animation: animateright2 4s forwards; /* Animate the text */
+}
+
+@keyframes animateright2 {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+.marquee{
+  
+  background-color: brown;
+  color: rgb(230, 152, 52);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
